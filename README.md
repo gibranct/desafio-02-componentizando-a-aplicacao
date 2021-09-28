@@ -32,10 +32,10 @@ To clone and run this application, you'll need [Git](https://git-scm.com), [Node
 
 ```bash
 # Clone this repository
-$ git clone https://github.com/gibranct/desafio-01-conceitos-do-react.git
+$ git clone https://github.com/gibranct/desafio-02-componentizando-a-aplicacao.git
 
 # Go into the repository
-$ cd desafio-01-conceitos-do-react
+$ cd desafio-02-componentizando-a-aplicacao
 
 # Install dependencies
 $ yarn install

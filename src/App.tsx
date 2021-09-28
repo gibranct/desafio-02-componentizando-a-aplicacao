@@ -13,15 +13,7 @@ import './styles/content.scss';
 export function App() {
   const [selectedGenreId, setSelectedGenreId] = useState(1);
 
-  const [genres, setGenres] = useState<GenreResponseProps[]>([]);
-
   const [selectedGenre, setSelectedGenre] = useState<GenreResponseProps>({} as GenreResponseProps);
-
-  useEffect(() => {
-    api.get<GenreResponseProps[]>('genres').then(response => {
-      setGenres(response.data);
-    });
-  }, []);
 
   useEffect(() => {
     api.get<GenreResponseProps>(`genres/${selectedGenreId}`).then(response => {
@@ -37,7 +29,6 @@ export function App() {
     <div style={{ display: 'flex', flexDirection: 'row' }}>
 
       <SideBar
-        genres={genres}
         selectedGenreId={selectedGenreId}
         genreClikHandler={handleClickButton}
       />
